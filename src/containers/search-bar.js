@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {fetchCountries} from '../actions/index'
 
-export class SearchBar extends Component {
+class SearchBar extends Component {
   UNSAFE_componentWillMount() {
-    
+    this.props.fetchCountries()
   }
   renderSelectCountries() {
     return (
@@ -20,4 +22,8 @@ export class SearchBar extends Component {
   }
 }
 
-export default SearchBar
+const mapDispatchToProps = {
+  fetchCountries
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar)
