@@ -1,4 +1,4 @@
-import { GET_RATE_EXCHANGE } from "../actions"
+import { GET_RATE_EXCHANGE } from "../actions/index"
 
 const initialState = {
   rateExchangeList: []
